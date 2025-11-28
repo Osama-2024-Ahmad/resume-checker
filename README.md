@@ -2,7 +2,7 @@
 
 An intelligent tool designed to help job seekers optimize their resumes. This application analyzes your CV against a specific Job Description (JD) to provide actionable feedback, an ATS compatibility score, and personalized recommendations.
 
-🔗 **Live Demo:** [resume-checker-smoky-seven.vercel.app](https://resume-checker-smoky-seven.vercel.app)
+🔗 **Live Demo:** [resume-checker-pi.vercel.app](https://resume-checker-pi.vercel.app)
 
 ![Resume Checker AI Screenshot](public/screenshot.png)
 
