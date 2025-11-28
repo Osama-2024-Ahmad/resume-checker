@@ -25,6 +25,7 @@ An intelligent tool designed to help job seekers optimize their resumes. This ap
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **PDF Processing**: `pdf-parse`
+- **AI**: [Google Gemini API](https://ai.google.dev/)
 
 ## 🏁 Getting Started
 
@@ -34,6 +35,7 @@ Follow these steps to set up the project locally.
 
 - Node.js (v18 or higher recommended)
 - npm or yarn
+- Google Gemini API key (get one from [Google AI Studio](https://aistudio.google.com/app/apikey))
 
 ### Installation
 
@@ -48,12 +50,17 @@ Follow these steps to set up the project locally.
    npm install
    ```
 
-3. Run the development server:
+3. Create a `.env.local` file in the root directory and add your Gemini API key:
+   ```bash
+   GEMINI_API_KEY=your_api_key_here
+   ```
+
+4. Run the development server:
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## 📖 Usage
 
@@ -63,9 +70,18 @@ Follow these steps to set up the project locally.
 4. **Analyze**: Click the "Analyze Resume" button.
 5. **Review Results**: Scroll down to see your ATS score, missing keywords, and specific advice on how to improve your resume.
 
-## ⚠️ Note on AI Integration
+## 🤖 AI-Powered Analysis
 
-Currently, the analysis backend (`src/app/api/analyze/route.ts`) returns **mocked data** for demonstration purposes. To make this fully functional, you will need to integrate a real LLM API (like OpenAI GPT-4 or Google Gemini) in the backend route.
+This application uses **Google Gemini AI** to provide real-time, intelligent analysis of your resume against job descriptions. The AI evaluates:
+- ATS compatibility score
+- Strengths and weaknesses
+- Missing keywords
+- Specific recommendations for improvement
+- Revised versions of your resume bullets
+
+## 🚀 Deployment
+
+When deploying to Vercel or other platforms, make sure to add the `GEMINI_API_KEY` environment variable in your deployment settings.
 
 ## 📂 Project Structure
 
